@@ -11,7 +11,7 @@ namespace Deltics.PeImageInfo.Reader
             var orgPos = GetPosition();
             
             var signature =ReadBytes(4);
-            if (!signature.SequenceEqual(PeHeader.PE_SIGNATURE))
+            if (!signature.SequenceEqual(PeImage.PE_SIGNATURE))
                 return null;
             
             return new()

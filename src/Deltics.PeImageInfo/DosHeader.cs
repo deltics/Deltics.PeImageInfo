@@ -24,6 +24,6 @@ namespace Deltics.PeImageInfo
         public byte[] Reserved2                  { get; internal set; } // e_res2 (20 bytes)
         public ulong  HeaderAddress              { get; internal set; } // e_lfanew
 
-        public readonly bool IsValid => Magic.SequenceEqual(PeHeader.MZ_MAGIC);
+        public readonly bool IsValid => Magic.SequenceEqual(PeImage.MZ_MAGIC);
     }
 }

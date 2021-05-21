@@ -19,7 +19,7 @@ namespace Deltics.PeImageInfo
         public ushort SizeOfOptionalHeader { get; internal set; }
         public ushort Characteristics      { get; internal set; }
 
-        public bool  IsValid  => Signature.SequenceEqual(PeHeader.PE_SIGNATURE);
+        public bool  IsValid  => Signature.SequenceEqual(PeImage.PE_SIGNATURE);
         public ulong Location { get; internal set; }
         public ulong Size     { get; internal set; }
     }

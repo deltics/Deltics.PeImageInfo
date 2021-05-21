@@ -1,16 +1,15 @@
-using System.IO;
 using System.Linq;
 using Deltics.PeImageInfo;
-using Deltics.VersionInfo;
 using FluentAssertions;
 using Tests.Artefacts;
 using Xunit;
+
 
 namespace PeImageTests
 {
     public class Tests
     {
-        private static PeHeader LoadArtefact(string filename)
+        private static PeImage LoadArtefact(string filename)
         {
             return new (Artefact.Load(filename));
         }

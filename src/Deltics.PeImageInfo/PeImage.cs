@@ -16,7 +16,7 @@ namespace Deltics.PeImageInfo
     }
 
 
-    public class PeHeader
+    public class PeImage
     {
         internal static readonly byte[] MZ_MAGIC     = {0x4d, 0x5a};
         internal static readonly byte[] PE_SIGNATURE = {0x50, 0x45, 0x00, 0x00};
@@ -34,7 +34,7 @@ namespace Deltics.PeImageInfo
         public bool   IsValid      => HeaderFormat != Format.UNKNOWN;
 
 
-        public PeHeader(Stream stream)
+        public PeImage(Stream stream)
         {
             Reader = new PeReader(stream);
 
