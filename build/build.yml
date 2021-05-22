@@ -3,10 +3,12 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-# the build will trigger on any changes to the develop or master branches
 trigger:
   - develop
   - master
+
+pr:
+  - develop
 
 # the build will run on a Microsoft hosted agent, using the lastest Windows VM Image
 pool:
