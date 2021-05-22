@@ -1,7 +1,7 @@
+using System.IO;
 using System.Linq;
 using Deltics.PeImageInfo;
 using FluentAssertions;
-using Tests.Artefacts;
 using Xunit;
 
 
@@ -11,7 +11,7 @@ namespace PeImageTests
     {
         private static PeImage LoadArtefact(string filename)
         {
-            return new (Artefact.Load(filename));
+            return new (new FileStream($"artefacts/{filename}", FileMode.Open));
         }
 
         

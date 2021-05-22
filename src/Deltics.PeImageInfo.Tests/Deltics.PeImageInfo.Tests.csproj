@@ -9,7 +9,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Deltics.PeInfo.TestArtefacts" Version="1.0.0" />
         <PackageReference Include="FluentAssertions" Version="5.10.3" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
         <PackageReference Include="xunit" Version="2.4.1" />
@@ -39,21 +38,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Include="..\..\..\Deltics.PeInfo.TestArtefacts\src\Deltics.PeInfo.TestArtefacts\artefacts\x64.dll">
-        <Link>artefacts\x64.dll</Link>
+      <EmbeddedResource Include="artefacts\x64.dll">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <EmbeddedResource Include="..\..\..\Deltics.PeInfo.TestArtefacts\src\Deltics.PeInfo.TestArtefacts\artefacts\x64.exe">
-        <Link>artefacts\x64.exe</Link>
+      <EmbeddedResource Include="artefacts\x64.exe">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <EmbeddedResource Include="..\..\..\Deltics.PeInfo.TestArtefacts\src\Deltics.PeInfo.TestArtefacts\artefacts\x86.dll">
-        <Link>artefacts\x86.dll</Link>
+      <EmbeddedResource Include="artefacts\x86.dll">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <Content Include="..\..\..\Deltics.PeInfo.TestArtefacts\src\Deltics.PeInfo.TestArtefacts\artefacts\x86.exe">
-        <Link>artefacts\x86.exe</Link>
-      </Content>
+      <EmbeddedResource Include="artefacts\x86.exe">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>
