@@ -40,10 +40,13 @@ namespace PeImageTests
         {
             var sut = LoadArtefact(filename);
 
-            sut.Sections.Length.Should().Be(sectionNames.Length);
+            var isDebug       = sut.Sections.Any(s => s.Name == ".debug");
+            var expectedNames = isDebug ? sectionNames : sectionNames[0..^1];
+
+            sut.Sections.Length.Should().Be(expectedNames.Length);
             
-            foreach (var i in Enumerable.Range(0, sectionNames.Length))
-                sut.Sections[i].Name.Should().Be(sectionNames[i]);
+            foreach (var i in Enumerable.Range(0, expectedNames.Length))
+                sut.Sections[i].Name.Should().Be(expectedNames[i]);
         }
     }
 }
