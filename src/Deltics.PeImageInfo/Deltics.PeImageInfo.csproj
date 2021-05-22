@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>Deltics.PeImageInfo</AssemblyName>
+        <RootNamespace>Deltics.PeImageInfo</RootNamespace>
+        <PackageId>Deltics.PeImageInfo</PackageId>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>PE Image Info</Title>
+        <Authors>Deltics (Jolyon Direnko-Smith)</Authors>
+        <Description>Provides information from data structures in a Windows PE (Portable Executable) image, read directly from a byte stream such as from a file on disk or provided in an upload byte array to a Web Api.  No use of native Apis is made, so this .net standard package works on all .net supported platforms.</Description>
+        <Copyright>(c)2021 Jolyon Direnko-Smith</Copyright>
+        <Company>Deltics</Company>
+        <Product>Deltics.PeImageInfo</Product>
+        <AssemblyVersion>0.0.1</AssemblyVersion>
+        <FileVersion>0.0.1</FileVersion>
+        <PackageProjectUrl>https://github.com/deltics/Deltics.PeImageInfo</PackageProjectUrl>
+        <PackageLicenseUrl>BSD-3-Clause-Attribution</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/deltics/Deltics.PeImageInfo</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+</Project>
