@@ -66,7 +66,7 @@ position.  Characters will be read from the stream until a null-terminator is en
 
 The overload that takes a length parameter will read the specified number of characters from the stream at the
 current stream position **and** will also read what is expected to be a null terminator (two-bytes).  If the
-two bytes following the string of the specified length are not null, then an **InvalidDataContractException** is thrown.
+two bytes following the string of the specified length are not null, then an **InvalidOperationException** is thrown.
 
 ```
    var s = reader.ReadStringZ(10);  // 's' will hold the null-terminated string of length == 10 at the

@@ -1,9 +1,7 @@
 
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net.Security;
-using System.Runtime.Serialization;
 using System.Text;
 
 
@@ -32,7 +30,11 @@ namespace Deltics.PeImageInfo.Reader
         //  that the string is null-terminated.
         public string ReadStringZ(int len)
         {
-            var bytes = ReadBytes((len + 1) * 2);
+            var bytes = ReadBytes(len * 2);
+
+            var nullTerm = ReadUInt16();    // Read two additional bytes which are expected to be a null terminator
+            if (nullTerm != 0)
+                throw new InvalidOperationException("Expected null-terminator was not present");
 
             return Encoding.Unicode.GetString(bytes.Take(len * 2).ToArray());
         }
